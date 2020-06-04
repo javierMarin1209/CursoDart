@@ -1,22 +1,42 @@
-
 import 'dart:ffi';
 
 void main(List<String> arguments) {
-  int varInt = 1;
-  double varDouble = 1.0;
-  String varString= "Hola";
-  bool varBool=true;
+  List<String> list;
 
-  print('''$varString mi nombre es javier
+  list=["Negro","Rojo"];
+
+  list.add("Rosado");
+
+  print(list);
+
+  list.removeLast();
+
+  print(list);
+
+  List<String> listAux=["auzl","Verde"];
+
+  list.addAll(listAux);
+
+  print(list);
+
+  list.remove("Negro");
+
+  list.removeAt(1);
+
+  print(list);
+
+  Set set;
+
+  set= Set.from(['Javier',"Andres","Paola"]);
   
-    otra cosa
-  ''');
+  print(set);
 
-  print(r"#6$/$#$#)$#/#)$/#&#&##&\n");
-  print(varInt);
-  print(varDouble);
-  print(varString);
-  print(varBool);
+  set.add("Julieth");
 
-  print(varString.isEmpty);
+  print(set);
+
+  set.remove("Andres");
+
+  print(set);
+
 }
