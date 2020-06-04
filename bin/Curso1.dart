@@ -1,42 +1,26 @@
 import 'dart:ffi';
 
 void main(List<String> arguments) {
-  List<String> list;
+  Map<int,String> map;
+  map ={
+    1:"Rojo",
+    2:"Azul",
+  };
 
-  list=["Negro","Rojo"];
+  print(map);
 
-  list.add("Rosado");
+  map[3]="verde";
 
-  print(list);
+  print(map);
 
-  list.removeLast();
+  map[4]="Rosa";
 
-  print(list);
+  print(map);
 
-  List<String> listAux=["auzl","Verde"];
+  map.remove(2);
 
-  list.addAll(listAux);
+  print(map);
 
-  print(list);
-
-  list.remove("Negro");
-
-  list.removeAt(1);
-
-  print(list);
-
-  Set set;
-
-  set= Set.from(['Javier',"Andres","Paola"]);
-  
-  print(set);
-
-  set.add("Julieth");
-
-  print(set);
-
-  set.remove("Andres");
-
-  print(set);
-
+  print(map.isEmpty);
+  print(map.length);
 }
