@@ -1,21 +1,14 @@
-import 'dart:ffi';
+
 
 void main(List<String> arguments) {
-  int edad =1;
-
-  if(edad==18){
-    print("adulto");
-  }else if(edad <=12){
-    print("infante");
-  }else if(edad >60){
-    print("Tercera edad");
+  int i = 0;
+  while(i<=10){
+    print(i);
+    i++;
   }
 
-  var acceso = edad ==18 ?'correcto':'incorrecto';
-
-  print('el usuario tiene acceso: $acceso');
-
-  var nombre='Andres';
-
-  print(nombre ?? "invitado");
+  do{
+    print(i);
+    i--;
+  }while(i>=0);
 }
