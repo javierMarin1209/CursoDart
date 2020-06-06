@@ -1,24 +1,21 @@
 import 'dart:ffi';
 
 void main(List<String> arguments) {
+  int edad =1;
 
-  paramatrosRequeridos(1, 2);
-  ParamOpcionalesPosi(1);
-  ParamOpcionalesNombrado(param2: 1,a:8);
-}
+  if(edad==18){
+    print("adulto");
+  }else if(edad <=12){
+    print("infante");
+  }else if(edad >60){
+    print("Tercera edad");
+  }
 
-void paramatrosRequeridos(int a,int b){
-  print("imprime primer parametro $a");
-  print("imprime segundo parametro $b");
+  var acceso = edad ==18 ?'correcto':'incorrecto';
 
-}
-//[] para el parametro opcional
-void ParamOpcionalesPosi(int a,[int b]){
-  print('imprime primer parametro $a');
-  print("imprime segundo parametro $b");
-}
+  print('el usuario tiene acceso: $acceso');
 
-void ParamOpcionalesNombrado({int a,int param2= 4}){
-  print("imprime primer parametro $a");
-  print("imprime segundo parametro $param2");
+  var nombre='Andres';
+
+  print(nombre ?? "invitado");
 }
