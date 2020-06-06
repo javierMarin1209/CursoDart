@@ -1,21 +1,19 @@
 import 'dart:ffi';
 
 void main(List<String> arguments) {
-  add();
-  addParam(3, 5);
-  var regreso=addRegreso(3, 5);
-  print(regreso);
+  funcionArrow(3,5);
+  var returno=funcionArrowRetorno(3,5);
+  print(returno);
+
+
+  List list =["Rojo","Azul","Rosa"];
+
+  list.forEach((element) {
+    if(element=="Rojo"){
+      print(element);
+    }
+  });
 }
+void funcionArrow(int a, int b) => print("resultado sera:${a+b}");
 
-void add(){
-  print (3+5);
-}
-
-
-void addParam(int i,int j){
-  print(i+j);
-}
-
- int addRegreso(int a, int b){
-  return a+b;
- }
+int funcionArrowRetorno(int a, int b) => a+b;
